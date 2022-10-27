@@ -14,7 +14,7 @@ const Column = (props) => {
       <h2 className={styles.title}>{props.title}</h2>
 
       <ul className={styles.cards}>
-        {props.cards.map((card) => (
+        {cards.map((card) => (
           <Card key={card.id} title={card.title} />
         ))}
       </ul>
