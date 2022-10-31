@@ -16,11 +16,14 @@ const reducer = (state, action) => {
         ...state,
         cards: [...state.cards, { ...action.payload, id: shortid() }],
       };
+
+    case 'UPDATE_SEARCHSTRING':
+      return { ...state, searchString: action.payload };
+
     default:
       return state;
   }
 };
-// dodanie nowej akcji do reducera (ADD_CARD)
 
 const store = createStore(
   reducer,
