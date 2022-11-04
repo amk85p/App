@@ -1,10 +1,9 @@
 @use 'sass:math';
 @import '../../styles/settings.scss';
 
-.columnForm{
+.columnForm {
   padding: 10px;
   margin: 10px;
-
 }
 
 .input {
@@ -12,8 +11,6 @@
   margin: 10px;
   border-radius: $radius;
 }
-
-
 
 .column {
   flex-shrink: 0;

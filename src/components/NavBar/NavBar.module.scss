@@ -1,0 +1,45 @@
+@use 'sass:math';
+@import '../../styles/settings.scss';
+
+.container {
+  background: #202530;
+  height: $base-size * 5;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  width: 1400px;
+  margin: 0 auto;
+}
+
+form {
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.title {
+  font-size: ($base-size * 1.5);
+  margin: 0 ($base-size * 2);
+}
+
+.icon::before {
+  display: flex;
+  text-align: center;
+  margin: 22% ($base-size * 2);
+  padding-right: $base-size;
+  color: $color-light;
+  font-size: ($base-size * 2);
+  vertical-align: middle;
+  position: relative;
+}

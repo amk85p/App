@@ -6,13 +6,15 @@
   color: $color-light;
   text-align: center;
   line-height: 1.3;
-  padding: $base-size;
-  margin: 0 $base-size $base-size $base-size;
+  padding: $base-size/1.2;
+  margin: 0 0 0 $base-size/2;
   border-radius: $radius;
   cursor: pointer;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   transition: $transition;
+  font-size: 100%;
+  max-width: 150px;
 
   &:hover {
     background: darken($color-success, 5%);

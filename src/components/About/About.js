@@ -1,14 +1,14 @@
-import styles from './Hero.module.scss';
+import styles from './About.module.scss';
 import PageTitle from '../PageTitle/PageTitle';
 
-const Hero = () => {
+const About = () => {
   return (
     <div className={styles.hero}>
-      <PageTitle>My first React App</PageTitle>
+      <PageTitle>About</PageTitle>
       <p className={styles.subtitle}>
         A simple to-do app, with lists, columns and card
       </p>
     </div>
   );
 };
-export default Hero;
+export default About;
