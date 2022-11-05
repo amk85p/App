@@ -9,17 +9,17 @@ const NavBar = () => {
         <span className={styles.icon + ' fa fa-bars'} />
         <form>
           <h3 className={styles.title}>
-            <Link className={styles.link} to={'../'}>
+            <Link className={styles.link} to={'/'}>
               Home
             </Link>
           </h3>
           <h3 className={styles.title}>
-            <Link className={styles.link} to={'../Favorite'}>
+            <Link className={styles.link} to={'/favorite'}>
               Favorite
             </Link>
           </h3>
           <h3 className={styles.title}>
-            <Link className={styles.link} to={'../About'}>
+            <Link className={styles.link} to={'/about'}>
               About
             </Link>
           </h3>
