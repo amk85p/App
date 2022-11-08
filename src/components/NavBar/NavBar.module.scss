@@ -6,12 +6,6 @@
   height: $base-size * 5;
 }
 
-.link {
-  color: white;
-  text-decoration: none;
-  cursor: pointer;
-}
-
 .nav {
   display: flex;
   justify-content: space-between;
@@ -29,8 +23,29 @@ form {
 }
 
 .title {
+  color: $color-light;
   font-size: ($base-size * 1.5);
   margin: 0 ($base-size * 2);
+
+  list-style: none;
+  display: flex;
+  margin: 0 20px;
+
+  li {
+    padding: 0 10px;
+    font-weight: 700;
+
+    a {
+      color: $color-light;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .linkActive {
+      color: $color-warning;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
 }
 
 .icon::before {

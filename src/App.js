@@ -3,20 +3,9 @@ import Container from './components/Container/Container';
 import NavBar from './components/NavBar/NavBar';
 import About from './components/About/About';
 import Favorite from './components/Favorite/Favorite';
+import List from './components/List/List';
 import { Routes, Route } from 'react-router-dom';
 
-// const App = () => {
-//   return (
-//     <div>
-//       <h1>My first React App</h1>
-//       <p>A simple to-do app, with lists, columns and card</p>
-//       <form>
-//         <input type='text' />
-//         <button>Search</button>
-//       </form>
-//     </div>
-//   );
-// };
 const App = () => {
   return (
     <main>
@@ -26,6 +15,7 @@ const App = () => {
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/favorite' element={<Favorite />} />
+          <Route path='/list/list/:listId' element={<List />} />
           <Route
             path='*'
             element={

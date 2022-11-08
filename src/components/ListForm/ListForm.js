@@ -1,26 +1,25 @@
-import styles from './ColumnForm.module.scss';
+import styles from './ListForm.module.scss';
 import { useState } from 'react';
 import Button from '../Button/Button';
 import { useDispatch } from 'react-redux';
-import { addColumn } from '../../redux/store';
+import { addList } from '../../redux/store';
 
-const ColumnForm = ({ listId }) => {
+const Listform = () => {
   const [title, setTitle] = useState('');
-  const [icon, setIcon] = useState('');
+  const [description, setDescription] = useState('');
 
   const dispatch = useDispatch();
 
-  //console.log(listId, icon, title);
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(addColumn({ title, icon, listId }));
+    dispatch(addList({ title, description }));
 
     setTitle('');
-    setIcon('');
+    setDescription('');
   };
 
   return (
-    <form onSubmit={handleSubmit} className={styles.ColumnForm}>
+    <form onSubmit={handleSubmit} className={styles.listform}>
       Title:{' '}
       <input
         type='text'
@@ -28,16 +27,16 @@ const ColumnForm = ({ listId }) => {
         onChange={(e) => setTitle(e.target.value)}
         className={styles.input}
       />
-      Icon:{' '}
+      Description:{' '}
       <input
         type='text'
-        value={icon}
-        onChange={(e) => setIcon(e.target.value)}
+        value={description}
+        onChange={(e) => setDescription(e.target.value)}
         className={styles.input}
       />
-      <Button>Add column</Button>
+      <Button>Add list</Button>
     </form>
   );
 };
 
-export default ColumnForm;
+export default Listform;

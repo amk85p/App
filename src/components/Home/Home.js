@@ -1,6 +1,8 @@
 import Hero from '../Hero/Hero';
 import SearchForm from '../SearchForm/SearchForm';
 import List from '../List/List';
+import Lists from '../Lists/Lists';
+import Listform from '../ListForm/ListForm';
 
 // const App = () => {
 //   return (
@@ -18,8 +20,10 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <SearchForm />
-      <List />
+      {/* <SearchForm /> */}
+      <Lists />
+      <Listform />
+      {/* <List /> */}
     </>
   );
 };
