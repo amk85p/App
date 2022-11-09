@@ -8,7 +8,6 @@ const Column = (props) => {
   const searchString = useSelector((state) => state.searchString);
 
   const cards = useSelector((state) => getFilteredCards(state, props.id));
-  console.log('Column render');
 
   return (
     <article className={styles.column}>
@@ -17,7 +16,12 @@ const Column = (props) => {
 
       <ul className={styles.cards}>
         {cards.map((card) => (
-          <Card key={card.id} title={card.title} />
+          <Card
+            key={card.id}
+            id={card.id}
+            title={card.title}
+            isFavorite={card.isFavorite}
+          />
         ))}
       </ul>
 

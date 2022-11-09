@@ -22,6 +22,11 @@ export const uptadeSearchstring = (payload) => ({
   payload,
 });
 
+export const toggleCardFavorite = (payload) => ({
+  type: 'TOGGLE_CARD_FAVORITE',
+  payload,
+});
+
 //GET ALL COLLUMNS
 
 export const getAllColumns = (state) => state.columns;
@@ -32,6 +37,9 @@ export const getFilteredCards = ({ cards, searchString }, columnId) =>
     (card) =>
       card.columnId === columnId && strContains(card.title, searchString)
   );
+
+export const getFavoriteCards = ({ cards, isFavorite }) =>
+  cards.filter((card) => card.isFavorite === isFavorite);
 
 // getAllLists
 export const getAllLists = (state) => state.lists;
@@ -71,6 +79,16 @@ const reducer = (state, action) => {
 
     case 'UPDATE_SEARCHSTRING':
       return { ...state, searchString: action.payload };
+
+    case 'TOGGLE_CARD_FAVORITE':
+      return {
+        ...state,
+        cards: state.cards.map((card) =>
+          card.id === action.payload
+            ? { ...card, isFavorite: !card.isFavorite }
+            : card
+        ),
+      };
 
     default:
       return state;
