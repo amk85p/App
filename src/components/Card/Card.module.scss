@@ -36,7 +36,7 @@ button {
     color: $color-success;
   }
 
-  .icon::before {
+  .icon {
     display: flex;
     text-align: center;
     margin: 5% ($base-size * 2);
@@ -45,5 +45,13 @@ button {
     font-size: ($base-size * 2);
     vertical-align: middle;
     position: relative;
+
+    &:hover {
+      color: rgb(30, 30, 144);
+    }
+
+    &:active {
+      color: $color-success;
+    }
   }
 }

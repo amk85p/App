@@ -1,6 +1,12 @@
 @use 'sass:math';
 @import '../../styles/settings.scss';
 
+.container {
+  min-width: 400px;
+  display: flex;
+  justify-content: center;
+}
+
 .column {
   flex-shrink: 0;
   width: calc(33% - 12px);
@@ -33,6 +39,9 @@
 
 .cards {
   padding: math.div($base-size, 2) 0;
+  color: black;
+  align-items: center;
+  min-width: 400px;
 }
 
 @media (max-width: 767px) {

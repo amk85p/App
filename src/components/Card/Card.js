@@ -6,14 +6,13 @@ import clsx from 'clsx';
 
 const Card = (props) => {
   const dispatch = useDispatch();
-
   const id = props.id;
   const isFavorite = props.isFavorite;
 
   const clickHandle = (e) => {
     e.preventDefault();
-    dispatch(toggleCardFavorite({ id, isFavorite }));
-    console.log('g', props.id, props.isFavorite);
+    dispatch(toggleCardFavorite(id));
+    console.log('g', id, isFavorite, styles.active);
   };
 
   return (
@@ -21,12 +20,9 @@ const Card = (props) => {
       {props.title}
       <button
         onClick={clickHandle}
-        className={clsx(
-          styles.icon + ' fa fa-star',
-          props.isFavorite && styles.active
-        )}
+        className={clsx(styles.button, isFavorite && styles.active)}
       >
-        {/* <span className={styles.icon + ' fa fa-star'}></span> */}
+        <span className={styles.icon + ' fa fa-star'}></span>
       </button>
     </li>
   );
