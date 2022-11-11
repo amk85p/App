@@ -11,22 +11,15 @@ const Card = (props) => {
 
   const clickHandle = () => {
     dispatch(toggleCardFavorite(id));
-
-    console.log('g', id, isFavorite);
   };
 
   return (
     <li className={styles.card}>
       {props.title}
-
       <button
         type='button'
         onClick={clickHandle}
-        className={clsx(
-          styles.button,
-
-          isFavorite && styles.buttonActive
-        )}
+        className={clsx(styles.button, isFavorite && styles.buttonActive)}
       >
         <span className={styles.icon + ' fa fa-star'} />
       </button>
