@@ -9,20 +9,27 @@ const Card = (props) => {
   const id = props.id;
   const isFavorite = props.isFavorite;
 
-  const clickHandle = (e) => {
-    e.preventDefault();
+  const clickHandle = () => {
     dispatch(toggleCardFavorite(id));
-    console.log('g', id, isFavorite, styles.active);
+
+    console.log('g', id, isFavorite);
   };
 
   return (
     <li className={styles.card}>
       {props.title}
+
       <button
+        color='active'
+        type='button'
         onClick={clickHandle}
-        className={clsx(styles.button, isFavorite && styles.active)}
+        className={clsx(
+          styles.button,
+
+          isFavorite && styles.buttonActive
+        )}
       >
-        <span className={styles.icon + ' fa fa-star'}></span>
+        <span className={styles.icon + ' fa fa-star'} />
       </button>
     </li>
   );
