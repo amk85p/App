@@ -20,7 +20,6 @@ const Card = (props) => {
       {props.title}
 
       <button
-        color='active'
         type='button'
         onClick={clickHandle}
         className={clsx(
