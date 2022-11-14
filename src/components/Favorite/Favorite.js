@@ -1,15 +1,13 @@
 import styles from './Favorite.module.scss';
 import PageTitle from '../PageTitle/PageTitle';
 
-import { getFavoriteCards } from '../../redux/store';
+import { getFavoriteCards } from '../../redux/cardsRedux';
 import { useSelector } from 'react-redux';
 import Card from '../Card/Card';
 
 const Favorite = (props) => {
   const cardsFav = useSelector(getFavoriteCards);
 
-  const card = props.card;
-  console.log(props.id, props.isFavorite, cardsFav);
   if (cardsFav.length === 0)
     return (
       <div className={styles.hero}>

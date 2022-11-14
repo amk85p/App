@@ -28,6 +28,7 @@
   transition: $transition;
   background: none;
   font-size: ($base-size * 2);
+  justify-content: flex-end;
 
   &:active {
     color: red;
@@ -39,7 +40,19 @@
 }
 
 .icon {
+  margin: 5px;
   &:active {
     color: red;
   }
+}
+
+.iconTrash {
+  margin: 5px;
+  &:active {
+    color: red;
+  }
+}
+
+.buttons {
+  justify-content: flex-end;
 }
